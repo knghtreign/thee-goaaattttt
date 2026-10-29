@@ -68,9 +68,9 @@ export const AnimatedStatsSection: React.FC = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-3 sm:py-4 bg-[#F7F4E9] border-y border-[#E6DFD2] overflow-hidden">
+    <section ref={sectionRef} className="py-2 sm:py-2.5 bg-[#F7F4E9] border-y border-[#E6DFD2] overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="bg-[#FAF7F0] rounded-2xl border border-[#E2DBD0] shadow-xs px-4 py-3 sm:py-4">
+        <div className="bg-[#FAF7F0] rounded-2xl border border-[#E2DBD0] shadow-xs px-4 py-2 sm:py-2.5">
           <StaggerContainer
             staggerDelay={0.08}
             delayChildren={0.05}

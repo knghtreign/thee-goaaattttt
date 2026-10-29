@@ -22,24 +22,24 @@ interface TransformationPhoto {
 
 const TRANSFORMATION_PHOTOS: TransformationPhoto[] = [
   {
-    id: 'transformation-1',
-    url: '/assets/transformations/trans-1.webp',
-    alt: 'Fixed Teeth Dental Implant & Crown Transformation - Dr. Deepal Shah',
-  },
-  {
     id: 'transformation-2',
     url: '/assets/transformations/trans-2.webp',
     alt: 'Gap Closure Dental Transformation & Patient Note - Dr. Deepal Shah',
   },
   {
-    id: 'transformation-3',
-    url: '/assets/transformations/trans-3.webp',
-    alt: 'Before and After Smile Makeover - Dr. Deepal Shah',
+    id: 'transformation-new-1',
+    url: '/assets/transformations/trans-new-1.webp',
+    alt: 'Smile Makeover Clinical Transformation - Dr. Deepal Shah',
   },
   {
-    id: 'transformation-4',
-    url: '/assets/transformations/trans-4.webp',
-    alt: 'New Smile Makeover & Patient Testimonial - Dr. Deepal Shah',
+    id: 'transformation-new-2',
+    url: '/assets/transformations/trans-new-2.webp',
+    alt: 'Aesthetic Dental Alignment Transformation - Dr. Deepal Shah',
+  },
+  {
+    id: 'transformation-new-3',
+    url: '/assets/transformations/trans-new-3.webp',
+    alt: 'Full Smile Rehabilitation Before and After - Dr. Deepal Shah',
   },
   {
     id: 'transformation-5',
@@ -84,10 +84,10 @@ export const SmileTransformationSlider: React.FC<SmileTransformationSliderProps>
   return (
     <section
       id="transformation"
-      className="py-8 sm:py-12 bg-[#F7F4E9] border-t border-[#E6DFD1] overflow-hidden"
+      className="py-6 sm:py-8 bg-[#F7F4E9] border-t border-[#E6DFD1] overflow-hidden"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="text-center max-w-xl mx-auto mb-8 sm:mb-10">
+        <div className="text-center max-w-xl mx-auto mb-5 sm:mb-6">
           <TextReveal
             text="Real Smile Transformations"
             as="h2"

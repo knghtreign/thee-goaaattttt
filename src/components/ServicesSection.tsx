@@ -71,7 +71,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
     <section
       ref={sectionRef}
       id="services"
-      className="py-8 sm:py-12 bg-[#F7F4E9] relative overflow-hidden select-none"
+      className="py-6 sm:py-8 bg-[#F7F4E9] relative overflow-hidden select-none"
     >
       {/* Decorative stars with scroll parallax */}
       <motion.div

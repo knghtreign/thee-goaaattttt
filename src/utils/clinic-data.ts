@@ -28,7 +28,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     iconName: 'Search',
     durationMinutes: 30,
     highlight: 'Comprehensive Review',
-    image: '/assets/treatments/check-ups.png',
+    image: '/assets/treatments/check-ups.webp',
   },
   {
     id: 'teeth-cleaning',

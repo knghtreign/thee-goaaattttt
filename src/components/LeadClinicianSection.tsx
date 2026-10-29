@@ -68,11 +68,17 @@ export const LeadClinicianSection: React.FC<LeadClinicianSectionProps> = ({
             </div>
 
             <div className="relative z-10 max-w-2xl mx-auto space-y-4 sm:space-y-6">
-              {/* Lead Clinician Badge */}
+              {/* Lead Clinician & Tagline Badges */}
               <ScrollReveal animation="slide-down" delay={30} once={false}>
-                <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#FEF6E4]/15 border border-[#F5D88E] text-[#F5D88E] text-[11px] sm:text-xs font-bold uppercase tracking-widest shadow-2xs">
-                  <Award className="w-3.5 h-3.5 text-[#F5D88E]" />
-                  <span>LEAD CLINICIAN</span>
+                <div className="flex flex-wrap items-center justify-center gap-2">
+                  <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#FEF6E4]/15 border border-[#F5D88E] text-[#F5D88E] text-[11px] sm:text-xs font-bold uppercase tracking-widest shadow-2xs">
+                    <Award className="w-3.5 h-3.5 text-[#F5D88E]" />
+                    <span>LEAD CLINICIAN</span>
+                  </div>
+                  <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#FAF7F0] border border-[#E5D2A5] text-[#2D4B3E] text-[11px] sm:text-xs font-black shadow-xs">
+                    <Sparkles className="w-3.5 h-3.5 text-[#B87D18]" />
+                    <span>Healthy Smiles for All Ages</span>
+                  </div>
                 </div>
               </ScrollReveal>
 
@@ -168,7 +174,7 @@ export const LeadClinicianSection: React.FC<LeadClinicianSectionProps> = ({
               animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
               exit={{ opacity: 0, scale: 0.93, filter: 'blur(6px)' }}
               transition={{ duration: 0.28, ease: LUXURY_EASE }}
-              className="bg-white rounded-[24px] sm:rounded-[32px] max-w-lg w-full overflow-hidden shadow-2xl relative border border-stone-200 max-h-[90vh] flex flex-col"
+              className="bg-white rounded-[24px] sm:rounded-[32px] max-w-lg sm:max-w-2xl w-full overflow-hidden shadow-2xl relative border border-stone-200 max-h-[90vh] flex flex-col"
             >
               <div className="h-1.5 sm:h-2 bg-[#F0C05A] w-full shrink-0" />
 
@@ -181,15 +187,15 @@ export const LeadClinicianSection: React.FC<LeadClinicianSectionProps> = ({
               </button>
 
               <div className="p-4 sm:p-7 overflow-y-auto">
-                <div className="flex flex-col sm:grid sm:grid-cols-12 gap-4 sm:gap-6 items-start">
-                  <div className="w-full sm:col-span-5 flex sm:flex-col items-center gap-3.5 sm:gap-0">
-                    <div className="relative w-28 h-36 sm:w-full sm:aspect-[3/4] rounded-2xl sm:rounded-3xl overflow-hidden border-3 sm:border-4 border-[#2D4B3E] shadow-md bg-stone-100 shrink-0">
+                <div className="flex flex-col sm:grid sm:grid-cols-12 gap-5 sm:gap-6 items-center sm:items-start">
+                  <div className="w-full sm:col-span-5 flex sm:flex-col items-center justify-center gap-3.5 sm:gap-0">
+                    <div className="relative w-32 sm:w-full aspect-[532/781] rounded-2xl sm:rounded-3xl overflow-hidden border-3 sm:border-4 border-[#2D4B3E] shadow-md bg-[#2D4B3E]/5 shrink-0">
                       <img
                         src="/assets/user/doctor_deepal.png"
                         alt="Dr. Deepal Shah - Malabar Hill"
-                        className="w-full h-full object-cover object-top"
+                        className="w-full h-full object-contain object-center"
                       />
-                      <div className="absolute bottom-1 left-1 right-1 sm:bottom-2 sm:left-2 sm:right-2 bg-[#192B23]/90 text-white text-center text-[8px] sm:text-[10px] font-black uppercase tracking-wider py-0.5 sm:py-1 rounded-md sm:rounded-lg">
+                      <div className="absolute bottom-1.5 left-1.5 right-1.5 sm:bottom-2 sm:left-2 sm:right-2 bg-[#192B23]/90 text-white text-center text-[8px] sm:text-[10px] font-black uppercase tracking-wider py-0.5 sm:py-1 rounded-md sm:rounded-lg shadow-xs">
                         MALABAR HILL
                       </div>
                     </div>
@@ -210,8 +216,13 @@ export const LeadClinicianSection: React.FC<LeadClinicianSectionProps> = ({
 
                   <div className="w-full sm:col-span-7 space-y-2.5 sm:space-y-3.5">
                     <div className="hidden sm:block space-y-1.5">
-                      <div className="inline-block px-3 py-1 rounded-full bg-[#E8F0EC] border border-[#C5D8CE] text-[#2D4B3E] text-xs font-black uppercase tracking-wider">
-                        DENTIST & LEAD CLINICIAN
+                      <div className="flex flex-wrap items-center gap-2">
+                        <div className="inline-block px-3 py-1 rounded-full bg-[#E8F0EC] border border-[#C5D8CE] text-[#2D4B3E] text-xs font-black uppercase tracking-wider">
+                          DENTIST & LEAD CLINICIAN
+                        </div>
+                        <div className="inline-block px-3 py-1 rounded-full bg-[#FAF0D7] border border-[#EAC882] text-[#8C6D27] text-xs font-black uppercase tracking-wider">
+                          Healthy Smiles for All Ages
+                        </div>
                       </div>
                       <h3 className="text-2xl sm:text-3xl font-black text-[#1C241E] leading-tight">
                         Dr. Deepal Shah
@@ -222,7 +233,19 @@ export const LeadClinicianSection: React.FC<LeadClinicianSectionProps> = ({
                       </div>
                     </div>
 
-                    <p className="text-xs sm:text-[13px] text-stone-600 leading-relaxed font-medium">
+                    {/* Patient Care & Scheduling copy */}
+                    <p className="text-xs sm:text-[13px] text-stone-700 leading-relaxed font-semibold">
+                      Kids, adults or Seniors… each one needs personalized treatment options that suit their Budget and schedule.
+                    </p>
+
+                    {/* Pamphlet Highlight Callout */}
+                    <div className="p-2.5 sm:p-3 rounded-xl bg-[#F5F2EA] border border-[#DFD6C3] text-center shadow-2xs">
+                      <p className="text-xs sm:text-[12.5px] font-bold text-[#2D4B3E] leading-snug">
+                        A practice dedicated to providing <span className="text-[#B87D18] font-black underline decoration-[#F0C05A] underline-offset-2">PAINFREE, AFFORDABLE</span> dental solutions.
+                      </p>
+                    </div>
+
+                    <p className="text-xs sm:text-[12.5px] text-stone-600 leading-relaxed font-medium">
                       Focused on gentle, pain-free dentistry and preserving natural tooth vitality through modern aesthetic techniques and unhurried personal care.
                     </p>
 
@@ -278,3 +301,4 @@ export const LeadClinicianSection: React.FC<LeadClinicianSectionProps> = ({
     </section>
   );
 };
+

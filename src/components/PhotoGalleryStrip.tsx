@@ -37,8 +37,8 @@ const GALLERY_PHOTOS: PhotoItem[] = [
     id: 'gallery-img-3',
     url: '/assets/user/gal3.webp',
     category: 'Credentials & Honors',
-    title: 'Clinical Certifications Wall',
-    alt: 'Clinical Certifications Wall - Dr. Deepal Shah',
+    title: 'Recognized Clinical Credentials',
+    alt: 'Recognized Clinical Credentials - Dr. Deepal Shah',
   },
   {
     id: 'gallery-img-4',

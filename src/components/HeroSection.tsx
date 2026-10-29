@@ -33,7 +33,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <section
       id="home"
-      className="relative pt-4 pb-8 sm:pt-7 sm:pb-12 overflow-hidden bg-gradient-to-b from-[#F7F4E9] via-[#F4EFE3] to-[#F7F4E9]"
+      className="relative pt-2 pb-5 sm:pt-4 sm:pb-8 overflow-hidden bg-gradient-to-b from-[#F7F4E9] via-[#F4EFE3] to-[#F7F4E9]"
     >
       {/* Scroll-linked Ambient Warm Glow */}
       <motion.div
@@ -51,17 +51,23 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-center">
           {/* Left Column: Slogan, Surgeon Badge, and Action Buttons */}
           <motion.div
             style={{ y: shouldReduceMotion ? 0 : contentY }}
-            className="lg:col-span-7 space-y-4 sm:space-y-5"
+            className="lg:col-span-7 space-y-2.5 sm:space-y-3.5"
           >
-            {/* Surgeon Badge */}
+            {/* Surgeon Badge - strictly single-line on mobile & desktop with circular pill curvature */}
             <ScrollReveal animation="slide-down" delay={40} once={false}>
-              <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#EAE3D4] text-[#2D4B3E] text-xs font-bold tracking-wide border border-[#DDD3C0] shadow-2xs hover-lift">
-                <Sparkles className="w-3.5 h-3.5 text-[#2D4B3E]" />
-                <span>Dr. Deepal Shah • 21+ Years Dental Surgeon</span>
+              <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-[#FAF7F0] text-[#2D4B3E] text-[11px] sm:text-sm font-semibold tracking-tight sm:tracking-wide border border-[#DFD6C3] shadow-xs hover-lift whitespace-nowrap max-w-full">
+                <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#D4971A] shrink-0" />
+                <span className="whitespace-nowrap flex items-center gap-1 sm:gap-1.5 shrink-0">
+                  <span className="shrink-0">Dr. Deepal Shah</span>
+                  <span className="text-[#B87D18] shrink-0">•</span>
+                  <span className="font-extrabold text-[#B87D18] bg-[#F7F0DF] px-2.5 sm:px-3 py-1 rounded-full border border-[#E5D2A5] shrink-0 whitespace-nowrap shadow-2xs inline-flex items-center">
+                    21+ Years Dental Surgeon
+                  </span>
+                </span>
               </div>
             </ScrollReveal>
 
@@ -80,7 +86,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               staggerDelay={0.08}
               delayChildren={0.2}
               once={false}
-              className="flex flex-wrap items-center gap-3 pt-2"
+              className="flex items-center gap-3 pt-1"
             >
               <StaggerItem>
                 <button
@@ -90,16 +96,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   <Calendar className="w-4 h-4 text-[#F0C05A]" />
                   <span>Book Visit</span>
                   <ArrowRight className="w-3.5 h-3.5 opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-                </button>
-              </StaggerItem>
-
-              <StaggerItem>
-                <button
-                  onClick={onExploreServices}
-                  className="text-xs sm:text-sm font-bold text-[#2D4B3E] hover:text-[#1D3229] flex items-center gap-1.5 py-3 px-5 rounded-full hover:bg-stone-200/60 transition-all cursor-pointer group hover:-translate-y-0.5 active:translate-y-0"
-                >
-                  <span>Explore 18 Services</span>
-                  <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                 </button>
               </StaggerItem>
             </StaggerContainer>
