@@ -22,14 +22,14 @@ interface TransformationPhoto {
 
 const TRANSFORMATION_PHOTOS: TransformationPhoto[] = [
   {
-    id: 'transformation-2',
-    url: '/assets/transformations/trans-2.webp',
-    alt: 'Gap Closure Dental Transformation & Patient Note - Dr. Deepal Shah',
+    id: 'transformation-kommodo-1',
+    url: '/assets/transformations/trans-kommodo-1.webp',
+    alt: 'Real Smile Makeover Clinical Transformation - Dr. Deepal Shah',
   },
   {
-    id: 'transformation-new-1',
-    url: '/assets/transformations/trans-new-1.webp',
-    alt: 'Smile Makeover Clinical Transformation - Dr. Deepal Shah',
+    id: 'transformation-kommodo-2',
+    url: '/assets/transformations/trans-kommodo-2.webp',
+    alt: 'Aesthetic Dental Alignment Transformation - Dr. Deepal Shah',
   },
   {
     id: 'transformation-new-2',
@@ -47,9 +47,9 @@ const TRANSFORMATION_PHOTOS: TransformationPhoto[] = [
     alt: 'Full Mouth Rehabilitation Before and After - Dr. Deepal Shah',
   },
   {
-    id: 'transformation-6',
-    url: '/assets/transformations/trans-6.webp',
-    alt: 'Composite Bonding Before and After Smile Makeover - Dr. Deepal Shah',
+    id: 'transformation-kommodo-last',
+    url: '/assets/transformations/trans-kommodo-last.webp',
+    alt: 'Smile Transformation Before and After - Dr. Deepal Shah',
   },
 ];
 

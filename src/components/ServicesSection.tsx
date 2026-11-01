@@ -6,7 +6,6 @@ import {
   Calendar,
   X,
   ArrowRight,
-  ShieldCheck,
 } from 'lucide-react';
 import { SERVICES_DATA, ServiceItem } from '../utils/clinic-data';
 import { motion, AnimatePresence, useScroll, useTransform, useReducedMotion } from 'motion/react';
@@ -352,7 +351,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                 </button>
               </div>
 
-              <div className="relative rounded-2xl overflow-hidden h-56 border border-stone-200 bg-stone-900/10">
+              <div className="relative rounded-2xl overflow-hidden h-64 sm:h-72 border border-stone-200 bg-stone-900/10">
                 <img
                   src={selectedServiceForModal.image}
                   alt=""
@@ -364,15 +363,6 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                   alt={selectedServiceForModal.title}
                   className="relative z-10 w-full h-full object-contain"
                 />
-              </div>
-
-              <div className="bg-[#EFEAE0] p-4 rounded-2xl text-xs sm:text-sm text-stone-700 leading-relaxed border border-[#DFD8CB]">
-                <p className="font-semibold text-stone-900 mb-1">Clinical Procedure Overview:</p>
-                <p>{selectedServiceForModal.description}</p>
-                <div className="mt-2 pt-2 border-t border-stone-300 flex items-center gap-1.5 text-stone-800 font-semibold text-xs">
-                  <ShieldCheck className="w-4 h-4 text-[#2D4B3E]" />
-                  <span>Personally performed by Dr. Deepal Shah at Malabar Hill.</span>
-                </div>
               </div>
 
               <div className="flex gap-3 pt-2">
