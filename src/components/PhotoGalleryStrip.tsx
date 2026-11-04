@@ -30,8 +30,8 @@ const GALLERY_PHOTOS: PhotoItem[] = [
     id: 'gallery-img-2',
     url: '/assets/user/gal2.webp',
     category: 'Entrance & Hallway',
-    title: 'Consultation Entrance',
-    alt: 'Consultation Entrance - Malabar Hill',
+    title: 'Way to Consultation Cabin',
+    alt: 'Way to Consultation Cabin - Malabar Hill',
   },
   {
     id: 'gallery-img-3',

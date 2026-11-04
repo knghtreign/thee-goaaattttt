@@ -66,6 +66,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   const navLinks = [
     { label: 'Home', href: '#home', id: 'home' },
+    { label: 'About', href: '#about', id: 'about' },
     { label: 'Services', href: '#services', id: 'services' },
     { label: 'Transformations', href: '#transformation', id: 'transformation' },
     { label: 'Journey', href: '#journey', id: 'journey' },
@@ -151,13 +152,13 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
           </div>
 
-          {/* Mobile menu trigger - replaced 3 lines with 'MENU' */}
+          {/* Mobile menu trigger - changed from MENU to ABOUT */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="lg:hidden px-3.5 py-1.5 rounded-full border border-white/30 text-white hover:bg-white/10 font-bold text-xs tracking-wider uppercase transition-colors cursor-pointer"
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? 'CLOSE' : 'MENU'}
+            {mobileMenuOpen ? 'CLOSE' : 'ABOUT'}
           </button>
         </div>
 
