@@ -353,7 +353,7 @@ export const TREATMENT_STEPS: StepItem[] = [
     title: 'A Closer Look at Your Dental Health',
     desc: "Dr. Deepal examines your teeth and overall dental health to understand your needs and decide on the right course of treatment. 2D X-rays may be used when needed.",
     tags: ['Gentle Examination', '2D X-Rays When Needed'],
-    image: '/assets/user/step3.jpg',
+    image: '/assets/user/step3.png',
   },
   {
     step: 'STEP 04',
