@@ -237,24 +237,22 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                     transformStyle: 'preserve-3d',
                   }}
                 >
-                  {service.imageFit === 'contain' && (
-                    <img
-                      src={service.image}
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      decoding="async"
-                      className="absolute inset-0 w-full h-full object-cover object-center blur-md scale-110 brightness-75"
-                    />
-                  )}
+                  {/* Ambient blurred backdrop so no empty bars occur */}
+                  <img
+                    src={service.image}
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    decoding="async"
+                    className="absolute inset-0 w-full h-full object-cover object-center blur-md scale-110 brightness-75"
+                  />
+                  {/* Foreground uncropped image */}
                   <img
                     src={service.image}
                     alt={service.title}
                     loading="lazy"
                     decoding="async"
-                    className={`relative z-10 w-full h-full object-center ${
-                      service.imageFit === 'contain' ? 'object-contain' : 'object-cover'
-                    }`}
+                    className="relative z-10 w-full h-full object-contain p-1.5"
                     onError={(e) => {
                       (e.currentTarget as HTMLImageElement).src = '/assets/gal-2.png';
                     }}
@@ -335,10 +333,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
             >
               <div className="flex items-start justify-between">
                 <div>
-                  <span className="text-[10px] font-black uppercase tracking-widest text-[#2D4B3E] bg-[#E8F0EC] px-2.5 py-1 rounded-full border border-[#C5D8CE]">
-                    {selectedServiceForModal.categoryLabel}
-                  </span>
-                  <h3 className="font-serif-clinic text-2xl sm:text-3xl font-bold text-stone-900 mt-2">
+                  <h3 className="font-serif-clinic text-2xl sm:text-3xl font-bold text-stone-900">
                     {selectedServiceForModal.title}
                   </h3>
                 </div>
