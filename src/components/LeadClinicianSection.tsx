@@ -174,7 +174,7 @@ export const LeadClinicianSection: React.FC<LeadClinicianSectionProps> = ({
               animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
               exit={{ opacity: 0, scale: 0.93, filter: 'blur(6px)' }}
               transition={{ duration: 0.28, ease: LUXURY_EASE }}
-              className="bg-white rounded-[24px] sm:rounded-[32px] max-w-lg sm:max-w-2xl w-full overflow-hidden shadow-2xl relative border border-stone-200 max-h-[90vh] flex flex-col"
+              className="bg-white rounded-[24px] sm:rounded-[32px] max-w-lg sm:max-w-2xl lg:max-w-3xl w-full overflow-hidden shadow-2xl relative border border-stone-200 max-h-[90vh] flex flex-col"
             >
               <div className="h-1.5 sm:h-2 bg-[#F0C05A] w-full shrink-0" />
 
@@ -187,9 +187,10 @@ export const LeadClinicianSection: React.FC<LeadClinicianSectionProps> = ({
               </button>
 
               <div className="p-4 sm:p-7 overflow-y-auto">
-                <div className="flex flex-col sm:grid sm:grid-cols-12 gap-5 sm:gap-6 items-center sm:items-start">
-                  <div className="w-full sm:col-span-5 flex sm:flex-col items-center justify-center gap-3.5 sm:gap-0">
-                    <div className="relative w-32 sm:w-full aspect-[532/781] rounded-2xl sm:rounded-3xl overflow-hidden border-3 sm:border-4 border-[#2D4B3E] shadow-md bg-[#2D4B3E]/5 shrink-0">
+                <div className="flex flex-col sm:grid sm:grid-cols-12 gap-5 sm:gap-7 items-center sm:items-start">
+                  {/* Left Column: Doctor Photo */}
+                  <div className="w-full sm:col-span-5 flex flex-col items-center">
+                    <div className="relative w-36 sm:w-full max-w-[220px] aspect-[532/781] rounded-2xl sm:rounded-3xl overflow-hidden border-3 sm:border-4 border-[#2D4B3E] shadow-md bg-[#2D4B3E]/5 shrink-0">
                       <img
                         src="/assets/user/doctor_deepal.png"
                         alt="Dr. Deepal Shah - Malabar Hill"
@@ -199,97 +200,88 @@ export const LeadClinicianSection: React.FC<LeadClinicianSectionProps> = ({
                         MALABAR HILL
                       </div>
                     </div>
-
-                    <div className="sm:hidden flex-1 space-y-1">
-                      <div className="inline-block px-2 py-0.5 rounded-full bg-[#E8F0EC] border border-[#C5D8CE] text-[#2D4B3E] text-[9px] font-black uppercase tracking-wider">
-                        LEAD CLINICIAN
-                      </div>
-                      <h3 className="text-lg font-black text-[#1C241E] leading-tight">
-                        Dr. Deepal Shah
-                      </h3>
-                      <div className="flex items-center gap-1 text-[11px] font-bold text-[#2D4B3E]">
-                        <MapPin className="w-3.5 h-3.5 shrink-0 text-[#2D4B3E]" />
-                        <span>Malabar Hill, Mumbai</span>
-                      </div>
-                    </div>
                   </div>
 
-                  <div className="w-full sm:col-span-7 space-y-2.5 sm:space-y-3.5">
-                    <div className="hidden sm:block space-y-1.5">
-                      <div className="flex flex-wrap items-center gap-2">
-                        <div className="inline-block px-3 py-1 rounded-full bg-[#E8F0EC] border border-[#C5D8CE] text-[#2D4B3E] text-xs font-black uppercase tracking-wider">
+                  {/* Right Column: Profile Header, Bio, Badges & CTA */}
+                  <div className="w-full sm:col-span-7 space-y-3 sm:space-y-3.5">
+                    {/* Header */}
+                    <div className="space-y-1.5">
+                      <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                        <span className="inline-block px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-[#E8F0EC] border border-[#C5D8CE] text-[#2D4B3E] text-[10px] sm:text-xs font-black uppercase tracking-wider">
                           DENTIST & LEAD CLINICIAN
-                        </div>
-                        <div className="inline-block px-3 py-1 rounded-full bg-[#FAF0D7] border border-[#EAC882] text-[#8C6D27] text-xs font-black uppercase tracking-wider">
-                          Healthy Smiles for All Ages
-                        </div>
+                        </span>
+                        <span className="inline-block px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-[#FAF0D7] border border-[#EAC882] text-[#8C6D27] text-[10px] sm:text-xs font-black uppercase tracking-wider">
+                          HEALTHY SMILES FOR ALL AGES
+                        </span>
                       </div>
                       <h3 className="text-2xl sm:text-3xl font-black text-[#1C241E] leading-tight">
                         Dr. Deepal Shah
                       </h3>
-                      <div className="flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#2D4B3E]">
-                        <MapPin className="w-4 h-4 shrink-0 text-[#2D4B3E]" />
+                      <p className="text-xs sm:text-[13px] font-bold text-stone-600">
+                        BDS | Dental Surgeon | 21+ Years Experience
+                      </p>
+                      <div className="flex items-center gap-1.5 text-xs font-bold text-[#2D4B3E]">
+                        <MapPin className="w-3.5 h-3.5 shrink-0 text-[#2D4B3E]" />
                         <span>Malabar Hill, Mumbai</span>
                       </div>
                     </div>
 
-                    {/* Patient Care & Scheduling copy */}
-                    <p className="text-xs sm:text-[13px] text-stone-700 leading-relaxed font-semibold">
-                      Kids, adults or Seniors… each one needs personalized treatment options that suit their Budget and schedule.
-                    </p>
-
-                    {/* Pamphlet Highlight Callout */}
-                    <div className="p-2.5 sm:p-3 rounded-xl bg-[#F5F2EA] border border-[#DFD6C3] text-center shadow-2xs">
-                      <p className="text-xs sm:text-[12.5px] font-bold text-[#2D4B3E] leading-snug">
-                        A practice dedicated to providing <span className="text-[#B87D18] font-black underline decoration-[#F0C05A] underline-offset-2">PAINFREE, AFFORDABLE</span> dental solutions.
+                    {/* Bio Content with exact bold highlights */}
+                    <div className="space-y-2 text-xs sm:text-[12.5px] text-stone-700 leading-relaxed">
+                      <p>
+                        With over <b className="font-bold text-stone-950">21 years of experience</b>, Dr. Deepal Shah combines clinical expertise with a passion for creating healthy, confident smiles. A graduate of the <b className="font-bold text-stone-950">University of Mumbai</b>, her primary expertise is <b className="font-bold text-[#2D4B3E]">Full Mouth Rehabilitation</b>—restoring complete dental health, function, and aesthetics.
+                      </p>
+                      <p>
+                        Dedicated to continuous learning, she holds advanced training in <b className="font-bold text-stone-950">Implant Dentistry</b> and <b className="font-bold text-stone-950">Aesthetic Restorations</b> to deliver modern, evidence-based care.
+                      </p>
+                      <p>
+                        Her practice is built on <b className="font-bold text-[#2D4B3E]">trust, transparency, and zero-pain comfort</b>, combining experience and compassion for personalized patient care.
                       </p>
                     </div>
 
-                    <p className="text-xs sm:text-[12.5px] text-stone-600 leading-relaxed font-medium">
-                      Focused on gentle, pain-free dentistry and preserving natural tooth vitality through modern aesthetic techniques and unhurried personal care.
-                    </p>
-
-                    <div className="flex flex-wrap gap-1.5 pt-0.5">
-                      <span className="px-2.5 py-0.5 sm:py-1 rounded-lg bg-stone-100 text-stone-800 text-[10px] sm:text-[11px] font-bold">
+                    {/* Specialty Badges */}
+                    <div className="flex flex-wrap gap-1.5 pt-1">
+                      <span className="px-2.5 py-1 rounded-lg bg-stone-100 text-stone-800 text-[10px] sm:text-[11px] font-bold border border-stone-200">
                         Restorative & Aesthetics
                       </span>
-                      <span className="px-2.5 py-0.5 sm:py-1 rounded-lg bg-stone-100 text-stone-800 text-[10px] sm:text-[11px] font-bold">
+                      <span className="px-2.5 py-1 rounded-lg bg-stone-100 text-stone-800 text-[10px] sm:text-[11px] font-bold border border-stone-200">
                         21+ Years Practice
                       </span>
-                      <span className="px-2.5 py-0.5 sm:py-1 rounded-lg bg-[#FDECB8] text-[#8C6D27] text-[10px] sm:text-[11px] font-extrabold border border-[#F5D88E]">
+                      <span className="px-2.5 py-1 rounded-lg bg-[#FDECB8] text-[#8C6D27] text-[10px] sm:text-[11px] font-extrabold border border-[#F5D88E]">
                         Zero-Pain Protocol
                       </span>
                     </div>
 
-                    <div className="pt-1">
+                    {/* CTA Buttons */}
+                    <div className="pt-2 space-y-2">
                       <button
                         onClick={() => {
                           setIsModalOpen(false);
                           onOpenBooking();
                         }}
-                        className="w-full py-2.5 sm:py-3 px-4 rounded-full bg-gradient-to-r from-[#F5D883] via-[#E8B847] to-[#D59828] text-[#192B23] font-black text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all active:scale-95 cursor-pointer border border-amber-200 hover-lift"
+                        className="w-full py-3 px-4 rounded-full bg-gradient-to-r from-[#F5D883] via-[#E8B847] to-[#D59828] text-[#192B23] font-black text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all active:scale-95 cursor-pointer border border-amber-200 hover-lift"
                       >
-                        <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-[#192B23]" />
+                        <Sparkles className="w-4 h-4 fill-[#192B23]" />
                         <span>BOOK CONSULTATION</span>
-                        <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                        <ExternalLink className="w-4 h-4" />
                       </button>
-                    </div>
 
-                    <div className="grid grid-cols-2 gap-2 pt-0.5">
-                      <a
-                        href={`tel:${CLINIC_INFO.phoneMobile}`}
-                        className="py-1.5 sm:py-2 px-3 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-800 text-[10px] sm:text-[11px] font-bold flex items-center justify-center gap-1.5 transition-colors"
-                      >
-                        <Phone className="w-3 h-3 text-[#C28B23]" />
-                        <span>Call 7977776136</span>
-                      </a>
-                      <a
-                        href={`mailto:${CLINIC_INFO.email}`}
-                        className="py-1.5 sm:py-2 px-3 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-800 text-[10px] sm:text-[11px] font-bold flex items-center justify-center gap-1.5 transition-colors"
-                      >
-                        <Mail className="w-3 h-3 text-[#C28B23]" />
-                        <span>Email</span>
-                      </a>
+                      <div className="grid grid-cols-2 gap-2">
+                        <a
+                          href={`tel:${CLINIC_INFO.phoneMobile}`}
+                          className="py-2 px-3 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-800 text-[11px] font-bold flex items-center justify-center gap-1.5 transition-colors border border-stone-200/80 shadow-2xs"
+                        >
+                          <Phone className="w-3.5 h-3.5 text-[#C28B23]" />
+                          <span>Call 7977776136</span>
+                        </a>
+                        <a
+                          href={`mailto:${CLINIC_INFO.email}`}
+                          className="py-2 px-3 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-800 text-[11px] font-bold flex items-center justify-center gap-1.5 transition-colors border border-stone-200/80 shadow-2xs"
+                        >
+                          <Mail className="w-3.5 h-3.5 text-[#C28B23]" />
+                          <span>Email</span>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
