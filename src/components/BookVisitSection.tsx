@@ -227,7 +227,7 @@ export const BookVisitSection: React.FC = () => {
                   </div>
 
                   {/* Primary Button with smooth hover lift */}
-                  <div className="pt-2">
+                  <div className="pt-2 space-y-2">
                     <button
                       type="submit"
                       className="w-full py-3.5 px-5 rounded-2xl bg-[#2D4B3E] hover:bg-[#21382E] active:scale-[0.99] text-white font-black text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-[#2D4B3E]/20 transition-all cursor-pointer hover-lift"
@@ -235,6 +235,9 @@ export const BookVisitSection: React.FC = () => {
                       <MessageSquare className="w-4 h-4 fill-white" />
                       <span>CONFIRM & BOOK ON WHATSAPP ↗</span>
                     </button>
+                    <p className="text-[11px] text-stone-500 text-center leading-snug">
+                      Clicking Confirm &amp; Book on WhatsApp will open WhatsApp to send your details to Dr. Deepal's Dental clinic
+                    </p>
                   </div>
 
                   <div className="flex items-center justify-between text-[11px] text-stone-500 pt-1">

@@ -18,6 +18,7 @@ import {
   SmileSimulatorModal,
   HighThinkingAdvisorModal,
   MapsDirectionsModal,
+  PrivacyPolicyModal,
 } from './components/InteractiveModals';
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
   const [isSmileSimulatorOpen, setIsSmileSimulatorOpen] = useState(false);
   const [isAiConsultOpen, setIsAiConsultOpen] = useState(false);
   const [isMapsModalOpen, setIsMapsModalOpen] = useState(false);
+  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
 
   const handleOpenBooking = (serviceTitle?: string) => {
     setSelectedServiceToBook(serviceTitle || '');
@@ -113,6 +115,7 @@ export default function App() {
       <Footer
         onOpenBooking={() => handleOpenBooking()}
         onOpenMapsModal={() => setIsMapsModalOpen(true)}
+        onOpenPrivacyPolicy={() => setIsPrivacyOpen(true)}
       />
 
       {/* Interactive Booking Modal */}
@@ -143,6 +146,12 @@ export default function App() {
       <MapsDirectionsModal
         isOpen={isMapsModalOpen}
         onClose={() => setIsMapsModalOpen(false)}
+      />
+
+      {/* Privacy Policy Modal */}
+      <PrivacyPolicyModal
+        isOpen={isPrivacyOpen}
+        onClose={() => setIsPrivacyOpen(false)}
       />
     </div>
   );

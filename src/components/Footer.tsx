@@ -1,16 +1,17 @@
 import React from 'react';
-import { Clock, MapPin, Heart, ExternalLink } from 'lucide-react';
+import { Clock, MapPin, Heart, ShieldCheck } from 'lucide-react';
 import { CLINIC_INFO } from '../utils/clinic-data';
 import { StaggerContainer, StaggerItem, FadeUp } from './ScrollReveal';
 
 interface FooterProps {
   onOpenBooking: () => void;
   onOpenMapsModal: () => void;
+  onOpenPrivacyPolicy?: () => void;
   onOpenSmileSimulator?: () => void;
 }
 
 export const Footer: React.FC<FooterProps> = ({
-  onOpenBooking,
+  onOpenPrivacyPolicy,
 }) => {
   return (
     <footer id="contact" className="bg-[#192B23] text-stone-300 pt-12 pb-8 border-t border-[#2D4B3E] overflow-hidden">
@@ -139,16 +140,15 @@ export const Footer: React.FC<FooterProps> = ({
                   {CLINIC_INFO.email}
                 </a>
               </div>
-              <div className="pt-1">
-                <a
-                  href={CLINIC_INFO.googleMapsUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1 text-[11px] text-[#A8CDBC] hover:underline"
+              <div className="pt-3">
+                <button
+                  type="button"
+                  onClick={onOpenPrivacyPolicy}
+                  className="inline-flex items-center gap-2 text-lg sm:text-xl font-black text-[#F0C05A] hover:text-amber-300 underline underline-offset-4 transition-colors cursor-pointer tracking-tight"
                 >
-                  <span>View on Google Maps</span>
-                  <ExternalLink className="w-3 h-3" />
-                </a>
+                  <ShieldCheck className="w-5 h-5 shrink-0" />
+                  <span>Privacy Policy</span>
+                </button>
               </div>
             </div>
           </StaggerItem>

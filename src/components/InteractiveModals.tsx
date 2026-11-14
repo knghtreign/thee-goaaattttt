@@ -297,7 +297,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               </div>
 
               {/* Primary Action Button matching image_f9c8b7eb */}
-              <div className="pt-2">
+              <div className="pt-2 space-y-2">
                 <button
                   type="submit"
                   className="w-full py-3.5 px-5 rounded-2xl bg-[#2D4B3E] hover:bg-[#21382E] active:scale-[0.99] text-white font-black text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-[#2D4B3E]/20 transition-all cursor-pointer"
@@ -305,6 +305,9 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   <MessageSquare className="w-4 h-4 fill-white" />
                   <span>CONFIRM & BOOK ON WHATSAPP ↗</span>
                 </button>
+                <p className="text-[11px] text-stone-500 text-center leading-snug">
+                  Clicking Confirm &amp; Book on WhatsApp will open WhatsApp to send your details to Dr. Deepal's Dental clinic
+                </p>
               </div>
 
               {/* Quick direct booking or call option */}
@@ -1176,3 +1179,113 @@ export const MapsDirectionsModal: React.FC<MapsModalProps> = ({ isOpen, onClose 
     </div>
   );
 };
+
+// -------------------------------------------------------------
+// 6. Privacy Policy Modal
+// -------------------------------------------------------------
+interface PrivacyPolicyModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({ isOpen, onClose }) => {
+  if (!isOpen) return null;
+
+  return (
+    <div
+      onClick={onClose}
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-[#16261F]/75 backdrop-blur-xs"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="bg-[#FBF9F5] rounded-3xl max-w-xl w-full border-t-8 border-t-[#2D4B3E] border border-[#DFD6C3] shadow-2xl relative animate-pop-up max-h-[90vh] flex flex-col overflow-hidden"
+      >
+        <div className="p-5 sm:p-7 pb-4 border-b border-[#E8E2D6] flex items-start justify-between gap-4 bg-white">
+          <div className="flex items-start gap-3">
+            <div className="w-10 h-10 rounded-xl bg-[#E8F0EC] border border-[#C5D8CE] flex items-center justify-center shrink-0">
+              <ShieldCheck className="w-5 h-5 text-[#2D4B3E]" />
+            </div>
+            <div>
+              <span className="text-[10px] font-black uppercase tracking-widest text-[#8C6D27] block mb-0.5">
+                Patient Data &amp; Transparency
+              </span>
+              <h3 className="font-serif-clinic text-xl sm:text-2xl font-bold text-[#1C241E] leading-snug">
+                Privacy Policy – Dr. Deepal's Dental clinic
+              </h3>
+            </div>
+          </div>
+
+          <button
+            onClick={onClose}
+            className="text-stone-400 hover:text-stone-800 p-1.5 rounded-full bg-stone-100 hover:bg-stone-200 transition-colors cursor-pointer shrink-0"
+            aria-label="Close"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        <div className="p-5 sm:p-7 space-y-5 overflow-y-auto text-xs sm:text-sm text-stone-700 leading-relaxed">
+          <div className="space-y-1.5">
+            <h4 className="font-bold text-[#2D4B3E] text-sm sm:text-base">
+              1. How Your Information is Handled
+            </h4>
+            <p>
+              Our website does not store or save any personal information you enter into the appointment form. Submitting the form simply redirects you to WhatsApp so you can send your booking request directly to our clinic.
+            </p>
+          </div>
+
+          <div className="space-y-1.5">
+            <h4 className="font-bold text-[#2D4B3E] text-sm sm:text-base">
+              2. Use of Contact Details
+            </h4>
+            <p>
+              Once you message us on WhatsApp, our team uses your name and phone number strictly to confirm and manage your appointment. We never share, rent, or sell your contact details to third parties.
+            </p>
+          </div>
+
+          <div className="space-y-1.5">
+            <h4 className="font-bold text-[#2D4B3E] text-sm sm:text-base">
+              3. Third-Party Services
+            </h4>
+            <p>
+              Our website displays public reviews from Google Maps and connects via WhatsApp. Both services are governed by their own respective privacy policies.
+            </p>
+          </div>
+
+          <div className="space-y-1.5 bg-[#F5F2EA] p-4 rounded-2xl border border-[#DFD6C3]">
+            <h4 className="font-bold text-[#2D4B3E] text-sm sm:text-base">
+              4. Contact Us
+            </h4>
+            <p>
+              For any appointment queries, or if you would like our team to remove your contact details and chat history from our clinic phone, simply reach out to us at{' '}
+              <a
+                href={`tel:${CLINIC_INFO.phoneMobile}`}
+                className="font-bold text-[#2D4B3E] hover:underline whitespace-nowrap"
+              >
+                {CLINIC_INFO.phoneMobile}
+              </a>{' '}
+              or{' '}
+              <a
+                href={`mailto:${CLINIC_INFO.email}`}
+                className="font-bold text-[#2D4B3E] hover:underline break-all"
+              >
+                {CLINIC_INFO.email}
+              </a>
+              .
+            </p>
+          </div>
+        </div>
+
+        <div className="p-4 sm:px-7 bg-white border-t border-[#E8E2D6] flex justify-end">
+          <button
+            onClick={onClose}
+            className="px-6 py-2.5 rounded-full bg-[#2D4B3E] hover:bg-[#21382E] text-white text-xs sm:text-sm font-bold transition-colors cursor-pointer"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
